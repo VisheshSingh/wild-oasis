@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import './App.css';
 import GlobalStyles from './styles/GlobalStyles';
+import { useEffect } from 'react';
+import { getCabins } from './services/apiCabins';
 
 const H1 = styled.h1`
   font-size: 30px;
@@ -31,6 +33,10 @@ const StyledApp = styled.div`
 `;
 
 function App() {
+  useEffect(() => {
+    getCabins().then((data) => console.log(data));
+  }, []);
+
   return (
     <>
       <GlobalStyles />
