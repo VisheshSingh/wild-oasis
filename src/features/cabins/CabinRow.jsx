@@ -44,7 +44,6 @@ const Discount = styled.div`
 `;
 
 const CabinRow = ({ cabin }) => {
-  console.log(cabin);
   const { regularPrice, image, id, discount, maxCapacity, name } = cabin;
   const queryClient = useQueryClient();
 
