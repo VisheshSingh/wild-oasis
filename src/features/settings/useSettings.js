@@ -5,7 +5,7 @@ export function useSettings() {
   const {
     isLoading,
     error,
-    data: Fetching Applications Settingssettings,
+    data: settings,
   } = useQuery({
     queryKey: ['settings'],
     queryFn: getSettings,
